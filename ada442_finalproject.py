@@ -19,7 +19,7 @@ Original file is located at
 # Commented out IPython magic to ensure Python compatibility.
 import pandas as pd
 import numpy as np
-python -m pip install seaborn
+pip install seaborn
 import seaborn as sns
 import matplotlib.pyplot as plt
 import warnings
