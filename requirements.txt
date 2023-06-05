@@ -4,4 +4,4 @@ numpy
 seaborn
 matplotlib.pyplot
 warnings
-sklearn.preprocessing.OrdinalEncoder
+scikit-learn
