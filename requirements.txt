@@ -3,3 +3,4 @@ pandas
 numpy
 seaborn
 scikit-learn
+streamlit-aggrid
