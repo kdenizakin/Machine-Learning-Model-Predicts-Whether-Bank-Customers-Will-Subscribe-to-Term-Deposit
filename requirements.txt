@@ -2,3 +2,6 @@ streamlit
 pandas
 numpy
 seaborn
+matplotlib.pyplot
+warnings
+sklearn.preprocessing.OrdinalEncoder
