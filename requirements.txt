@@ -2,6 +2,4 @@ streamlit
 pandas
 numpy
 seaborn
-matplotlib.pyplot
-warnings
 scikit-learn
