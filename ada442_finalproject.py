@@ -17,9 +17,9 @@ Original file is located at
 """
 
 # Commented out IPython magic to ensure Python compatibility.
+import streamlit as st
 import pandas as pd
 import numpy as np
-pip install seaborn
 import seaborn as sns
 import matplotlib.pyplot as plt
 import warnings
