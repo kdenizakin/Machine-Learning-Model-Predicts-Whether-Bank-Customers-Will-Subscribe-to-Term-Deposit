@@ -76,8 +76,8 @@ def predict_display():
    # else:
     st.success(f'YES! Client subscribed to a term deposit.', icon="💸")
     # Load and display a GIF image
-    gif_image = open("Image20230606200153.gif", "rb")
-    st.image(gif_image,format = "GIF")
+    gif_image = "Image20230606200153.gif"
+    st.image(gif_image)
 
 if st.button('Press me'):
     predict_display() 
