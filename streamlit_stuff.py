@@ -69,7 +69,6 @@ pickled_model = pickle.load(open("models/tuned_best_model.pkl", 'rb'))#Load the 
 def predict_display():
     input_predictions = pickled_model.predict(input_data_df)
     # Print out the prediction
-    st.write(input_predictions)
     if input_predictions == "no":
         st.error(f'No! Client NOT subscribed to a term deposit.')
     else:
