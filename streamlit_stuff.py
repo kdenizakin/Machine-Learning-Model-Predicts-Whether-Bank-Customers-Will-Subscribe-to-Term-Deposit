@@ -80,6 +80,9 @@ def predict_display():
         # Load and display a GIF image
         gif_image = "Image20230606202922.gif"
         st.image(gif_image)
+        gif_image = "Image20230606203112.gif"
+        st.image(gif_image)
+        
 
 if st.button('Press me'):
     predict_display() 
