@@ -56,8 +56,6 @@ euribo3m = st.number_input('euribo3m:')
 
 nr_employed = st.number_input('nr_employed:')
 
-
-
 #Test single input.
 input_data = np.array([age, job, marital,education,default,housing,loan,contact,month,day_of_week,duration,campaign,pdays,previous,poutcome,emp_var_rate,cons_price_idx ,cons_conf_idx,	euribo3m,nr_employed])
 input_data = input_data.reshape(1, -1)
@@ -72,6 +70,7 @@ def predict_display():
     input_predictions = pickled_model.predict(input_data_df)
     # Print out the prediction
     st.write(input_predictions)
+    st.success(f'Client subscribed to a term deposit: {input_predictions}')
 
 if st.button('Press me'):
     predict_display() 
