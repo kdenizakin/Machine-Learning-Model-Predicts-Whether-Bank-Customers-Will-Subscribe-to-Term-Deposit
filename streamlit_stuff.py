@@ -8,7 +8,7 @@ import sklearn
 
 st.title('Deposit Prediction Web App')
 
-age = st.number_input('Please enter your age',type = int)
+age = st.number_input('Please enter your age',step = 1)
 
 job = st.selectbox(
      'Please select your job',
@@ -34,13 +34,15 @@ month = st.selectbox('Please select when was our lasst contact',
 
 day_of_week = st.selectbox('day_of_week',('mon','tue','wed','thu','fri'))
 
-duration = st.number_input('duration:')
+duration = st.number_input('duration:',step = 1)
 
-campaign = st.number_input('campaign:')
+campaign = st.number_input('campaign:',step = 1)
 
-pdays = st.number_input('pdays:')
-
-previous = st.number_input('previous:')
+pdays = st.number_input('pdays:',step = 1)
+if pdays == 0:
+    pdays = 999
+    
+previous = st.number_input('previous:',step = 1)
 
 poutcome = st.selectbox('poutcome',('success','failure','nonexistent') )
 
