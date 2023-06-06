@@ -27,6 +27,7 @@ housing = st.text_input('housing:', )
 loan = st.text_input('loan:', )
 
 contact = st.radio(label='Please select our contact communication type', options= ['cellular','telephone'])
+st.write('<style>div.Widget.row-widget.stRadio > div{flex-direction:row;}</style>', unsafe_allow_html=True)
 
 month = st.selectbox('Please select when was our lasst contact',
                       ('jan','feb','mar','apr','may','jun','jul','aug','sep','oct','nov','dec') )
