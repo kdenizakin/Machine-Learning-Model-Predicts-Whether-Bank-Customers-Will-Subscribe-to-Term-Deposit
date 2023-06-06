@@ -4,6 +4,8 @@ import numpy as np
 import matplotlib.pyplot as plt
 import pickle #pickle for saving the model.
 import sklearn
+import warnings
+warnings.filterwarnings("ignore")
 
 
 st.title('Deposit Prediction Web App')
@@ -70,7 +72,7 @@ def predict_display():
     input_predictions = pickled_model.predict(input_data_df)
     # Print out the prediction
     if input_predictions == "no":
-        st.error(f'No! Client is NOT subscribed to a term deposit.')
+        st.error(f'No! Client is NOT subscribed to a term deposit.', icon="🚨")
     else:
         st.success(f'Client subscribed to a term deposit: {input_predictions}')
 
