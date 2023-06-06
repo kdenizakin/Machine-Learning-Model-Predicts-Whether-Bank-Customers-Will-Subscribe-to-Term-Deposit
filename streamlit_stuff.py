@@ -85,6 +85,11 @@ def predict_display():
             st.write(' ')
         with col5:
             st.write(' ')
+        with col6:
+            st.write(' ')
+        with col7:
+            st.write(' ')
+
 
     else:
         st.success(f'YES! Client subscribed to a term deposit.', icon="💸")
