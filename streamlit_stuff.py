@@ -70,6 +70,8 @@ def predict_display():
     input_predictions = pickled_model.predict(input_data_df)
     # Print out the prediction
     st.write(input_predictions)
+    if input_predictions == "no":
+        st.fail(f'Client NOT subscribed to a term deposit: {input_predictions}')
     st.success(f'Client subscribed to a term deposit: {input_predictions}')
 
 if st.button('Press me'):
