@@ -73,17 +73,11 @@ def predict_display():
     # Print out the prediction
     if input_predictions == "no":
         st.error(f'No! Client is NOT subscribed to a term deposit.', icon="🚨")
-        gif_image = "Image20230606202918.gif"
-        st.image(gif_image)
-        from PIL import Image
-
         col1, col2, col3 = st.columns(3)
-
         with col1:
             st.write(' ')
-            
         with col2:
-            st.image("Image20230606202918.gif")
+            st.image("Image20230606202918.gif",width = 300 )
             
         with col3:
             st.write(' ')
