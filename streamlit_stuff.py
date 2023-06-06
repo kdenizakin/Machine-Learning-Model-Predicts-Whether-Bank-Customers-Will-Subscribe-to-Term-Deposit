@@ -77,9 +77,17 @@ def predict_display():
         st.image(gif_image)
         from PIL import Image
 
-        background = Image.open("Image20230606202918.gif")
-        col1, col2, col3 = st.columns([0.2, 5, 0.2])
-        col2.image(background, use_column_width=True)
+        col1, col2, col3 = st.columns(3)
+
+        with col1:
+            st.write(' ')
+            
+        with col2:
+            st.image("Image20230606202918.gif")
+            
+        with col3:
+            st.write(' ')
+
     else:
         st.success(f'YES! Client subscribed to a term deposit.', icon="💸")
         # Load and display a GIF image
