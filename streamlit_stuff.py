@@ -65,17 +65,11 @@ input_data_df = pd.DataFrame(input_data, columns=columns)
 #pickled_model = pickle.load(open("C:/Users/Deniz/OneDrive/Belgeler/GitHub/ada442/models/tuned_best_model.pkl", 'rb'))#Load the model.
 pickled_model = pickle.load(open("models/tuned_best_model.pkl", 'rb'))#Load the model.
 
-input_predictions = pickled_model.predict(input_data_df)
 
-<<<<<<< HEAD
+def predict_display():
     input_predictions = pickled_model.predict(input_data_df)
     # Print out the prediction
     st.write(input_predictions)
 
-
 if st.button('Press me'):
-    my_function() 
-=======
-# Print out the prediction
-st.write(input_predictions)
->>>>>>> cae4c3c8e5f7234b36cdb93378949d210d31228a
+    predict_display() 
