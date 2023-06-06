@@ -42,7 +42,7 @@ pdays = st.number_input('pdays:')
 
 previous = st.number_input('previous:')
 
-poutcome = st.text_input('poutcome:', )
+poutcome = st.selectbox('poutcome',('success','failure','nonexistent') )
 
 emp_var_rate = st.number_input('emp_var_rate:')
 
