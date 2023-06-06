@@ -73,7 +73,7 @@ def predict_display():
     # Print out the prediction
     if input_predictions == "no":
         st.error(f'No! Client is NOT subscribed to a term deposit.', icon="🚨")
-        col1, col2 ,col3, col4, col5 = st.columns(4)
+        col1, col2 ,col3, col4, col5 = st.columns(5)
         with col1:
             st.write(' ')
         with col2:
