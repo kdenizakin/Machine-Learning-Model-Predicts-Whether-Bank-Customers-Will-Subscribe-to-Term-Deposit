@@ -91,24 +91,26 @@ def predict_display():
 
 
     else:
-        st.success(f'YES! Client subscribed to a term deposit.', icon="💸")
-        # Load and display a GIF image
+        pass
+    
+    st.success(f'YES! Client subscribed to a term deposit.', icon="💸")
+    # Load and display a GIF image
 
-        col1, col2 ,col3, col4, col5, col6, col7 = st.columns(7)
-        with col1:
-            st.write(' ')
-        with col2:
-            st.image("Image20230606202922.gif", width = 500 )
-        with col3:
-            st.write(' ')
-        with col4:
-            st.write(' ')
-        with col5:
-            st.write(' ')
-        with col6:
-            st.write(' ')
-        with col7:
-            st.write(' ')
+    col1, col2 ,col3, col4, col5, col6, col7 = st.columns(7)
+    with col1:
+        st.write(' ')
+    with col2:
+        st.image("Image20230606202922.gif", width = 500 )
+    with col3:
+        st.write(' ')
+    with col4:
+        st.write(' ')
+    with col5:
+        st.write(' ')
+    with col6:
+        st.write(' ')
+    with col7:
+        st.write(' ')
 
         
         
