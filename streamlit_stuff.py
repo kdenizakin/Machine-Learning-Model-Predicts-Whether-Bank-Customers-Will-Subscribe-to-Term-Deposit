@@ -10,7 +10,9 @@ st.title('Deposit Prediction Web App')
 
 age = st.number_input('Age:')
 
-job = st.text_input('Job:', )
+job = st.selectbox(
+     'How would you like to be contacted?',
+    ('admin','blue-collar','entrepreneur', 'housemaid','management','retired','self-employed', 'services','student','technician','unemployed','unknown'))
 
 marital = st.text_input('marital:', )
 
