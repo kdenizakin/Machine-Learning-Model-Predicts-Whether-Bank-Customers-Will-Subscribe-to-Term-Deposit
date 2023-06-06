@@ -10,9 +10,13 @@ warnings.filterwarnings("ignore")
 
 st.title('Deposit Prediction Web App')
 
-age = st.number_input('Please enter your age',step = 1)
+col1, col2 ,col3, col4, col5, col6, col7 = st.columns(7)
+with col1:
+        age = st.number_input('Please enter your age',step = 1)
+
 if age != 0:
-    st.write(31)
+    with col2:
+        st.write(31)
 
 job = st.selectbox(
      'Please select your job',
