@@ -8,7 +8,7 @@ import sklearn
 
 st.title('Deposit Prediction Web App')
 
-age = st.number_input("Enter an integer",value=0, step=1,  format="%d", key="age", type=int)
+age = st.number_input('Enter an integer', step=1)
 
 job = st.selectbox(
      'Please select your job',
