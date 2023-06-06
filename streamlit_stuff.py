@@ -22,11 +22,11 @@ marital = st.selectbox('Please select your marital status',
 education = st.selectbox('Please select your education',
                           ('basic.4y','basic.6y','basic.9y','high.school','illiterate','professional.course','university.degree','unknown'))
 
-default = st.selectbox('default',('yes','no','unknown') )
+default = st.selectbox('Please select your if you have credit in default or not',('yes','no','unknown') )
 
-housing = st.selectbox('housing',('yes','no','unknown') )
+housing = st.selectbox('Please select your if you have housing loan or not',('yes','no','unknown') )
 
-loan = st.selectbox('loan:',('yes','no','unknown') )
+loan = st.selectbox('Please select your if you have personal loan',('yes','no','unknown') )
 
 contact = st.selectbox('Please select our contact communication type',
                 ('cellular','telephone'))
@@ -34,29 +34,29 @@ contact = st.selectbox('Please select our contact communication type',
 month = st.selectbox('Please select when was our lasst contact',
                       ('jan','feb','mar','apr','may','jun','jul','aug','sep','oct','nov','dec') )
 
-day_of_week = st.selectbox('day_of_week',('mon','tue','wed','thu','fri'))
+day_of_week = st.selectbox('Please select your last contact day of the week',('mon','tue','wed','thu','fri'))
 
-duration = st.number_input('duration:',step = 1)
+duration = st.number_input('Please enter your last contact duration in seconds',step = 1)
 
-campaign = st.number_input('campaign:',step = 1)
+campaign = st.number_input('Please enter your number of contacts performed',step = 1)
 
-pdays = st.number_input('pdays:',step = 1)
+pdays = st.number_input('Please enter number of days passed after last contacted from a previous campaign',step = 1)
 if pdays == 0:
     pdays = 999
     
-previous = st.number_input('previous:',step = 1)
+previous = st.number_input('Please enter the number of contacts performed before this campaign:',step = 1)
 
-poutcome = st.selectbox('poutcome',('success','failure','nonexistent') )
+poutcome = st.selectbox('Please select outcome of the previous marketing campaign',('success','failure','nonexistent') )
 
-emp_var_rate = st.number_input('emp_var_rate:')
+emp_var_rate = st.number_input('Please enter employment variation rate')
 
-cons_price_idx = st.number_input('cons_price_idx:')
+cons_price_idx = st.number_input('Please enter consumer price index')
 
-cons_conf_idx = st.number_input('cons_conf_idx:')
+cons_conf_idx = st.number_input('Please enter consumer confidence index')
 
-euribo3m = st.number_input('euribo3m:')
+euribo3m = st.number_input('Please enter euribor 3 month rate')
 
-nr_employed = st.number_input('nr_employed:')
+nr_employed = st.number_input('Please enter number of employees')
 
 #Test single input.
 input_data = np.array([age, job, marital,education,default,housing,loan,contact,month,day_of_week,duration,campaign,pdays,previous,poutcome,emp_var_rate,cons_price_idx ,cons_conf_idx,	euribo3m,nr_employed])
@@ -89,32 +89,26 @@ def predict_display():
         with col7:
             st.write(' ')
 
-
     else:
-        pass
-    
-    st.success(f'YES! Client subscribed to a term deposit.', icon="💸")
-    # Load and display a GIF image
+        st.success(f'YES! Client subscribed to a term deposit.', icon="💸")
+        # Load and display a GIF image
 
-    col1, col2 ,col3, col4, col5, col6, col7 = st.columns(7)
-    with col1:
-        st.write(' ')
-    with col2:
-        st.image("Image20230606202922.gif", width = 500 )
-    with col3:
-        st.write(' ')
-    with col4:
-        st.write(' ')
-    with col5:
-        st.write(' ')
-    with col6:
-        st.write(' ')
-    with col7:
-        st.write(' ')
-
-        
-        
-        
+        col1, col2 ,col3, col4, col5, col6, col7 = st.columns(7)
+        with col1:
+            st.write(' ')
+        with col2:
+            st.image("Image20230606202922.gif", width = 500 )
+        with col3:
+            st.write(' ')
+        with col4:
+            st.write(' ')
+        with col5:
+            st.write(' ')
+        with col6:
+            st.write(' ')
+        with col7:
+            st.write(' ')
+  
 
 if st.button('Press me'):
     predict_display() 
