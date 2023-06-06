@@ -64,5 +64,5 @@ pickled_model = pickle.load(open("models/tuned_best_model.pkl", 'rb'))#Load the 
 input_predictions = pickled_model.predict(input_data_df)
 
 # Print out the prediction
-print(input_predictions)
+st.write(input_predictions)
 
