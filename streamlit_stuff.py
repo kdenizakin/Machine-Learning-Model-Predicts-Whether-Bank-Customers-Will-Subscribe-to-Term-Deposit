@@ -4,6 +4,8 @@ import numpy as np
 import matplotlib.pyplot as plt
 import pickle #pickle for saving the model.
 import sklearn
+from sklearn.preprocessing import LabelEncoder, OneHotEncoder, OrdinalEncoder,  StandardScaler, MinMaxScaler
+from sklearn.compose import ColumnTransformer
 
 
 st.title('My first Streamlit app')
@@ -61,7 +63,20 @@ input_data_df = pd.DataFrame(input_data, columns=columns)
 #pickled_model = pickle.load(open("C:/Users/Deniz/OneDrive/Belgeler/GitHub/ada442/models/tuned_best_model.pkl", 'rb'))#Load the model.
 pickled_model = pickle.load(open("models/tuned_best_model.pkl", 'rb'))#Load the model.
 
-input_predictions = pickled_model.predict(input_data_df)
+month_categories = ["jan", "feb", "mar", "apr", "may", "jun", "jul", "aug", "sep", "oct", "nov", "dec"]
+day_categories = ["mon","tue","wed","thu","fri","sat","sun"]
+categorical_columns = ["job","marital","default","housing","loan","contact","education"]
+numerical_columns = ['age', "duration",'campaign', 'pdays', 'previous','emp.var.rate', 'cons.price.idx', 'cons.conf.idx', 'euribor3m', 'nr.employed']
+preprocess = ColumnTransformer([
+                             ("month_encoded",OrdinalEncoder(categories=[month_categories]),['month']),
+                             ("day_encoded",OrdinalEncoder(categories=[day_categories]),['day_of_week']),
+                             ('one_hot_encoder',OneHotEncoder(handle_unknown='ignore'), categorical_columns[1:]),
+                             ("numeric_scaler", StandardScaler(), numerical_columns),
+                             ('minmaxscaling', MinMaxScaler(), numerical_columns),
+                            ])
+
+transformed_input = preprocess.transform(input_data_df)
+input_predictions = pickled_model.predict(transformed_input)
 
 # Print out the prediction
 print(input_predictions)
