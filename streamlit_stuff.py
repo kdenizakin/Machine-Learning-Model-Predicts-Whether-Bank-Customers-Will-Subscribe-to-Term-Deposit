@@ -9,23 +9,15 @@ warnings.filterwarnings("ignore")
 
 
 st.title('Deposit Prediction Web App')
+st.set_page_config(page_title="Streamlit App", page_icon=":smiley:")
 
 col1, col2 ,col3, col4, col5, col6, col7 = st.columns(7)
-with col1:
-    age = st.number_input('Please enter your age',step = 1)
-with col2:
-    age = st.number_input('Please enter your age',step = 1)
-with col3:
-    age = st.number_input('Please enter your age',step = 1)
-with col4:
-    age = st.number_input('Please enter your age',step = 1)
-with col5:
-    age = st.number_input('Please enter your age',step = 1)
-with col6:
-    age = st.number_input('Please enter your age',step = 1)
+
+with col1 or col2:
+        age = st.number_input('Please enter your age',step = 1)
 
 if age != 0:
-    with col7:
+    with col2:
         st.write(31)
 
 job = st.selectbox(
