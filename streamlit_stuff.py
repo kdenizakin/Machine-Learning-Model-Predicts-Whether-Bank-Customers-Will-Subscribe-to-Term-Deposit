@@ -7,8 +7,7 @@ import sklearn
 import warnings
 warnings.filterwarnings("ignore")
 
-st.write("📃")
-st.title('Deposit Prediction Web App')
+st.title('📃Deposit Prediction Web App')
 age = st.number_input('Please enter your age',step = 1)
 
 job = st.selectbox(
