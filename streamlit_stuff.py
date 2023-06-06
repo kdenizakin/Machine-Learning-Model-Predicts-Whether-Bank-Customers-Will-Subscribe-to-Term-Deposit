@@ -54,8 +54,6 @@ euribo3m = st.number_input('euribo3m:')
 
 nr_employed = st.number_input('nr_employed:')
 
-import os
-st.write(os.getcwd())
 
 
 #Test single input.
