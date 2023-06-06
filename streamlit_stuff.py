@@ -20,19 +20,19 @@ marital = st.selectbox('Please select your marital status',
 education = st.selectbox('Please select your education',
                           ('basic.4y','basic.6y','basic.9y','high.school','illiterate','professional.course','university.degree','unknown'))
 
-default = st.text_input('default:', )
+default = st.selectbox('default',('yes','no','unknown') )
 
-housing = st.text_input('housing:', )
+housing = st.selectbox('housing',('yes','no','unknown') )
 
-loan = st.text_input('loan:', )
+loan = st.selectbox('loan:',('yes','no','unknown') )
 
-contact = st.radio(label='Please select our contact communication type', options= ['cellular','telephone'])
-st.write('<style>div.Widget.row-widget.stRadio > div{flex-direction:row;}</style>', unsafe_allow_html=True)
+contact = st.selectbox('Please select our contact communication type',
+                ('cellular','telephone'))
 
 month = st.selectbox('Please select when was our lasst contact',
                       ('jan','feb','mar','apr','may','jun','jul','aug','sep','oct','nov','dec') )
 
-day_of_week = st.text_input('day_of_week:',)
+day_of_week = st.selectbox('day_of_week',('mon','tue','wed','thu','fri'))
 
 duration = st.number_input('duration:')
 
@@ -59,7 +59,7 @@ st.write(os.getcwd())
 
 
 #Test single input.
-input_data = np.array([age, job, marital,	"basic.9y",	"no",	"yes",	"no",	"cellular",	"may",	"fri",	487,	2,	999,	0,	"nonexistent",	-1.8,	92.893,	-46.2,	1.313,	5099.1])
+input_data = np.array([age, job, marital,education,default,housing,loan,contact,month,day_of_week,duration,campaign,pdays,previous,poutcome,emp_var_rate,cons_price_idx ,cons_conf_idx,	euribo3m,nr_employed])
 input_data = input_data.reshape(1, -1)
 columns = ['age', 'job', 'marital', 'education', 'default', 'housing', 'loan', 'contact', 'month', 'day_of_week', 'duration', 'campaign', 'pdays', 'previous', 'poutcome', 'emp.var.rate', 'cons.price.idx', 'cons.conf.idx', 'euribor3m', 'nr.employed']
 input_data_df = pd.DataFrame(input_data, columns=columns)
