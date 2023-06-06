@@ -74,7 +74,7 @@ def predict_display():
     if input_predictions == "no":
         st.error(f'No! Client is NOT subscribed to a term deposit.', icon="🚨")
     else:
-        st.success(f'Client subscribed to a term deposit: {input_predictions}')
+        st.success(f'YES! Client subscribed to a term deposit.', icon="💸")
 
 if st.button('Press me'):
     predict_display() 
