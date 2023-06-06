@@ -59,7 +59,7 @@ st.write(os.getcwd())
 
 
 #Test single input.
-input_data = np.array([30, "blue-collar", "married",	"basic.9y",	"no",	"yes",	"no",	"cellular",	"may",	"fri",	487,	2,	999,	0,	"nonexistent",	-1.8,	92.893,	-46.2,	1.313,	5099.1])
+input_data = np.array([age, "job", "marital",	"basic.9y",	"no",	"yes",	"no",	"cellular",	"may",	"fri",	487,	2,	999,	0,	"nonexistent",	-1.8,	92.893,	-46.2,	1.313,	5099.1])
 input_data = input_data.reshape(1, -1)
 columns = ['age', 'job', 'marital', 'education', 'default', 'housing', 'loan', 'contact', 'month', 'day_of_week', 'duration', 'campaign', 'pdays', 'previous', 'poutcome', 'emp.var.rate', 'cons.price.idx', 'cons.conf.idx', 'euribor3m', 'nr.employed']
 input_data_df = pd.DataFrame(input_data, columns=columns)
