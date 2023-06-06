@@ -11,11 +11,21 @@ warnings.filterwarnings("ignore")
 st.title('Deposit Prediction Web App')
 
 col1, col2 ,col3, col4, col5, col6, col7 = st.columns(7)
-with col1 and col2:
-        age = st.number_input('Please enter your age',step = 1)
+with col1:
+    age = st.number_input('Please enter your age',step = 1)
+with col2:
+    age = st.number_input('Please enter your age',step = 1)
+with col3:
+    age = st.number_input('Please enter your age',step = 1)
+with col4:
+    age = st.number_input('Please enter your age',step = 1)
+with col5:
+    age = st.number_input('Please enter your age',step = 1)
+with col6:
+    age = st.number_input('Please enter your age',step = 1)
 
 if age != 0:
-    with col3:
+    with col7:
         st.write(31)
 
 job = st.selectbox(
