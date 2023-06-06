@@ -8,15 +8,17 @@ import sklearn
 
 st.title('Deposit Prediction Web App')
 
-age = st.number_input('Age:')
+age = st.number_input('Please enter your age')
 
 job = st.selectbox(
-     'How would you like to be contacted?',
+     'Please select your job',
     ('admin','blue-collar','entrepreneur', 'housemaid','management','retired','self-employed', 'services','student','technician','unemployed','unknown'))
 
-marital = st.text_input('marital:', )
+marital = st.selectbox('Please select your marital status',
+                       ('married','single','divorced'))
 
-education = st.text_input('education:', )
+education = st.selectbox('Please select your education',
+                          ('basic.4y','basic.6y','basic.9y','high.school','illiterate','professional.course','university.degree','unknown'))
 
 default = st.text_input('default:', )
 
@@ -24,9 +26,10 @@ housing = st.text_input('housing:', )
 
 loan = st.text_input('loan:', )
 
-contact = st.text_input('contact:', )
+contact = st.radio(label='Please select our contact communication type', options= ['cellular','telephone'])
 
-month = st.text_input('month:', )
+month = st.selectbox('Please select when was our lasst contact',
+                      ('jan','feb','mar','apr','may','jun','jul','aug','sep','oct','nov','dec') )
 
 day_of_week = st.text_input('day_of_week:',)
 
