@@ -6,7 +6,7 @@ import pickle #pickle for saving the model.
 import sklearn
 
 
-st.title('My first Streamlit app')
+st.title('31')
 
 age = st.number_input('Age:')
 
