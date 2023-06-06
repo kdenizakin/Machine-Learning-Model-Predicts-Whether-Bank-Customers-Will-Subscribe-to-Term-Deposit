@@ -3,6 +3,7 @@ import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
 import pickle #pickle for saving the model.
+import sklearn
 
 
 st.title('My first Streamlit app')
@@ -47,7 +48,8 @@ euribo3m = st.number_input('euribo3m:')
 
 nr_employed = st.number_input('nr_employed:')
 
-
+import os
+st.write(os.getcwd())
 
 
 #Test single input.
@@ -56,8 +58,8 @@ input_data = input_data.reshape(1, -1)
 columns = ['age', 'job', 'marital', 'education', 'default', 'housing', 'loan', 'contact', 'month', 'day_of_week', 'duration', 'campaign', 'pdays', 'previous', 'poutcome', 'emp.var.rate', 'cons.price.idx', 'cons.conf.idx', 'euribor3m', 'nr.employed']
 input_data_df = pd.DataFrame(input_data, columns=columns)
 
-print("hello")
-pickled_model = pickle.load(open("models/tuned_best_model.pkl", 'rb'))#Load the model.
+pickled_model = pickle.load(open("C:/Users/Deniz/OneDrive/Belgeler/GitHub/ada442/models/tuned_best_model.pkl", 'rb'))#Load the model.
+#pickled_model = pickle.load(open("models/tuned_best_model.pkl", 'rb'))#Load the model.
 
 input_predictions = pickled_model.predict(input_data_df)
 
