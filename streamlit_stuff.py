@@ -70,7 +70,7 @@ def predict_display():
     input_predictions = pickled_model.predict(input_data_df)
     # Print out the prediction
     if input_predictions == "no":
-        st.error(f'No! Client NOT subscribed to a term deposit.')
+        st.error(f'No! Client is NOT subscribed to a term deposit.')
     else:
         st.success(f'Client subscribed to a term deposit: {input_predictions}')
 
