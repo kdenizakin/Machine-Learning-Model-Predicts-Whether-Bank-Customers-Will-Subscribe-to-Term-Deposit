@@ -75,17 +75,18 @@ def predict_display():
         st.error(f'No! Client is NOT subscribed to a term deposit.', icon="🚨")
         gif_image = "Image20230606202918.gif"
         st.image(gif_image)
+        from PIL import Image
+
+        background = Image.open("Image20230606203112.gif")
+        col1, col2, col3 = st.columns([0.2, 5, 0.2])
+        col2.image(background, use_column_width=True)
     else:
         st.success(f'YES! Client subscribed to a term deposit.', icon="💸")
         # Load and display a GIF image
         gif_image = "Image20230606202922.gif"
         st.image(gif_image)
 
-        from PIL import Image
-
-        background = Image.open("Image20230606203112.gif")
-        col1, col2, col3 = st.columns([0.2, 5, 0.2])
-        col2.image(background, use_column_width=True)
+        
         
         
 
