@@ -77,7 +77,7 @@ def predict_display():
         with col1:
             st.write(' ')
         with col2:
-            st.image("Image20230606202918.gif",width = 300 )
+            st.image("Image20230606202918.gif",width = 500 )
             
         with col3:
             st.write(' ')
