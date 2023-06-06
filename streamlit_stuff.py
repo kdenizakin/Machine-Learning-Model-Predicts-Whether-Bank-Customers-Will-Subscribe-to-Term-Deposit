@@ -11,7 +11,7 @@ warnings.filterwarnings("ignore")
 st.title('Deposit Prediction Web App')
 
 col1, col2 ,col3, col4, col5, col6, col7 = st.columns(7)
-with col1 or col2:
+with col1 and col2:
         age = st.number_input('Please enter your age',step = 1)
 
 if age != 0:
