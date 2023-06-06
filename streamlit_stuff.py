@@ -72,3 +72,19 @@ input_predictions = pickled_model.predict(input_data_df)
 # Print out the prediction
 st.write(input_predictions)
 
+def main():
+    st.markdown("""
+                <style>
+                .reportview-container {
+                    background: #D3D3D3
+                }
+                </style>
+                """, 
+                unsafe_allow_html=True
+    )
+    
+    st.title("My Streamlit App")
+    # your other streamlit code
+
+if __name__ == "__main__":
+    main()
