@@ -9,18 +9,11 @@ warnings.filterwarnings("ignore")
 
 
 st.title('Deposit Prediction Web App')
+age = st.number_input('Please enter your age',step = 1)
 
-col1, col2 ,col3, col4, col5, col6, col7 = st.columns(7)
-
-with col1 :
-        age = st.number_input('Please enter your age',step = 1)
-
-if age != 0:
-    job = st.selectbox(
+job = st.selectbox(
      'Please select your job',
     ('admin','blue-collar','entrepreneur', 'housemaid','management','retired','self-employed', 'services','student','technician','unemployed','unknown'))
-
-
 
 marital = st.selectbox('Please select your marital status',
                        ('married','single','divorced'))
