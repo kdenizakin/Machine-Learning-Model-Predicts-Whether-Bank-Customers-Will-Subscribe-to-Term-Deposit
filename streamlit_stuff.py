@@ -77,7 +77,7 @@ def predict_display():
         st.image(gif_image)
         from PIL import Image
 
-        background = Image.open("Image20230606203112.gif")
+        background = Image.open("Image20230606202918.gif")
         col1, col2, col3 = st.columns([0.2, 5, 0.2])
         col2.image(background, use_column_width=True)
     else:
