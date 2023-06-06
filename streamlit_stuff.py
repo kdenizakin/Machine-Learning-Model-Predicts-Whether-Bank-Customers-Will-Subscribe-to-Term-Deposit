@@ -53,7 +53,7 @@ st.write(os.getcwd())
 
 
 #Test single input.
-input_data = np.array(["Age", "Job", "marital",	"education","default","housing","loan","contact","month","day_of_week",	"duration","campaign","pdays","previous","poutcome","emp_var_rate","cons_price_idx","cons_conf_idx","euribo3m",	"nr_employed"])
+input_data = np.array(['Age', 'Job', 'marital',	'education','default','housing','loan','contact','month','day_of_week',	'duration','campaign','pdays','previous','poutcome','emp_var_rate','cons_price_idx','cons_conf_idx','euribo3m',	'nr_employed'])
 input_data = input_data.reshape(1, -1)
 columns = ['age', 'job', 'marital', 'education', 'default', 'housing', 'loan', 'contact', 'month', 'day_of_week', 'duration', 'campaign', 'pdays', 'previous', 'poutcome', 'emp.var.rate', 'cons.price.idx', 'cons.conf.idx', 'euribor3m', 'nr.employed']
 input_data_df = pd.DataFrame(input_data, columns=columns)
